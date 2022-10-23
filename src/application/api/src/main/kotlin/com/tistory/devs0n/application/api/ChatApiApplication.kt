@@ -6,8 +6,8 @@ import org.springframework.boot.runApplication
 
 @EnableDomainChatModule
 @SpringBootApplication
-class ChatApplication
+class ChatApiApplication
 
 fun main(args: Array<String>) {
-    runApplication<ChatApplication>(args = args)
+    runApplication<ChatApiApplication>(args = args)
 }
