@@ -1,4 +1,8 @@
 spring:
+  config:
+    activate:
+      on-profile: local
+
   data:
     mongodb:
       uri: mongodb://127.0.0.1:27017/chat
@@ -13,5 +17,5 @@ spring:
 
 logging:
   level:
-    com.tistory.devs0n.chat: TRACE
+    com.tistory.devs0n.domain.chat: TRACE
     org.springframework.data.mongodb: DEBUG

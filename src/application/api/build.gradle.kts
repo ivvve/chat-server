@@ -1,6 +1,8 @@
 import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 
 dependencies {
+    implementation(project(":domain:chat"))
+
     // Web
     implementation("org.springframework.boot:spring-boot-starter-web")
 

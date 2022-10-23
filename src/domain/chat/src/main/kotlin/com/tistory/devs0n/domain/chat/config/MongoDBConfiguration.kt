@@ -1,4 +1,4 @@
-package com.tistory.devs0n.chat.config
+package com.tistory.devs0n.domain.chat.config
 
 import org.springframework.boot.autoconfigure.mongo.MongoProperties
 import org.springframework.boot.context.properties.ConfigurationProperties

@@ -92,14 +92,9 @@ subprojects {
 //    // Web
 //    implementation("org.springframework.boot:spring-boot-starter-websocket")
 //
-//    // DB
-//    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-//    implementation("org.redisson:redisson-spring-boot-starter:3.17.7")
-//
 //    // Util
 //    implementation("org.springframework.boot:spring-boot-starter-validation")
 //    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-//
 //
 //    // Testing
 //    testImplementation("org.testcontainers:junit-jupiter")

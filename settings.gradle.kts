@@ -17,8 +17,11 @@ data class Module(
     val path: String,
 )
 
-// domain
+// application
 module(name = ":application:api", path = "src/application/api")
+
+// domain
+module(name = ":domain:chat", path = "src/domain/chat")
 
 modules.forEach {
     include(it.name)
