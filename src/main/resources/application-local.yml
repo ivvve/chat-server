@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/chat
+      replica-set-name: rs
+      auto-index-creation: true
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    timeout: 5000
+
+logging:
+  level:
+    com.tistory.devs0n.chat: TRACE
+    org.springframework.data.mongodb: DEBUG
