@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  chat-mongodb:
+    image: mongo:6.0.2
+    container_name: chat-mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=chat
+    command: mongod --replSet rs
+  chat-redis:
+    image: redis:7.0.5
+    container_name: chat-redis
+    ports:
+      - 6379:6379
