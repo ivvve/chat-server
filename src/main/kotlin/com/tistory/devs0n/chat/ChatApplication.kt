@@ -1,11 +1,11 @@
-package com.example.chatserver
+package com.tistory.devs0n.chat
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ChatServerApplication
+class ChatApplication
 
 fun main(args: Array<String>) {
-    runApplication<ChatServerApplication>(*args)
+    runApplication<ChatApplication>(args = args)
 }
