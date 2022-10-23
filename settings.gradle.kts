@@ -19,6 +19,7 @@ data class Module(
 
 // application
 module(name = ":application:api", path = "src/application/api")
+module(name = ":application:websocket", path = "src/application/websocket")
 
 // domain
 module(name = ":domain:chat", path = "src/domain/chat")

@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+spring:
+  config:
+    activate:
+      on-profile: local
+    import:
+      - 'classpath:domain-chat-api-${spring.config.activate.on-profile}.yml'
