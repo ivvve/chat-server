@@ -4,10 +4,10 @@
 [cols="1,5"]
 |===
 |Language
-|Kotlin 1.6.x
+|Kotlin 1.7.x
 
 |Framework
-|Spring Framework (Boot 2.7.x)
+|Spring Framework (Boot 3.0.x)
 
 |Database
 |MongoDB
