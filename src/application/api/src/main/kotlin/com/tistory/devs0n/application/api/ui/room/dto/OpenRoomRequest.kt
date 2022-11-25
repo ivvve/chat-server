@@ -1,7 +1,7 @@
 package com.tistory.devs0n.application.api.ui.room.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import javax.validation.constraints.NotBlank
+import jakarta.validation.constraints.NotBlank
 
 data class OpenRoomRequest(
     @field:JsonProperty("host_user_id")

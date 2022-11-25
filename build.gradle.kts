@@ -3,11 +3,10 @@ import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.spring") version "1.6.21"
-    id("org.springframework.boot") version "2.7.5"
-    id("io.spring.dependency-management") version "1.0.15.RELEASE"
-    id("org.springframework.experimental.aot") version "0.12.1"
+    kotlin("jvm") version "1.7.21"
+    kotlin("plugin.spring") version "1.7.21"
+    id("org.springframework.boot") version "3.0.0"
+    id("io.spring.dependency-management") version "1.1.0"
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
 }
 
@@ -29,7 +28,6 @@ subprojects {
         plugin("org.jetbrains.kotlin.plugin.spring")
         plugin("org.springframework.boot")
         plugin("io.spring.dependency-management")
-        plugin("org.springframework.experimental.aot")
         plugin("io.gitlab.arturbosch.detekt")
     }
 
