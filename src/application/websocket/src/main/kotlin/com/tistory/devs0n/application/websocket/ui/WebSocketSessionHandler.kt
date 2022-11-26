@@ -2,6 +2,7 @@ package com.tistory.devs0n.application.websocket.ui
 
 import com.tistory.devs0n.application.websocket.common.SystemClock
 import com.tistory.devs0n.application.websocket.ui.connection.ConnectionPool
+import com.tistory.devs0n.application.websocket.ui.connection.TimeoutConnectionProcessor
 import com.tistory.devs0n.application.websocket.ui.connection.WebSocketSessionConnection
 import jakarta.annotation.PostConstruct
 import mu.KotlinLogging
@@ -16,15 +17,17 @@ import kotlin.concurrent.thread
 class WebSocketSessionHandler(
     private val systemClock: SystemClock,
     private val connectionPool: ConnectionPool,
+    private val timeoutConnectionProcessor: TimeoutConnectionProcessor,
 ) : TextWebSocketHandler() {
 
     @PostConstruct
     fun postConstruct() {
         thread(start = true, isDaemon = true) {
             while (true) {
-                Thread.sleep(HEALTH_CHECK_PERIOD_MILLISECONDS)
+                logger.debug { "Check timeout connections" }
+                Thread.sleep(TIMEOUT_CONNECTION_PROCESS_PERIOD_MILLISECONDS)
                 val now = this.systemClock.now()
-                this.connectionPool.closeAndRemoveTimeoutConnections(now)
+                this.timeoutConnectionProcessor.closeTimeoutConnections(now)
             }
         }
     }
@@ -66,7 +69,7 @@ class WebSocketSessionHandler(
     }
 
     companion object {
-        private const val HEALTH_CHECK_PERIOD_MILLISECONDS = 5_000L
+        private const val TIMEOUT_CONNECTION_PROCESS_PERIOD_MILLISECONDS = 2_000L
 
         private val logger = KotlinLogging.logger { }
     }
