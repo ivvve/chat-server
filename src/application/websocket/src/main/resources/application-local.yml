@@ -7,3 +7,7 @@ spring:
       on-profile: local
     import:
       - 'classpath:domain-chat-api-${spring.config.activate.on-profile}.yml'
+
+logging:
+  level:
+    com.tistory.devs0n: DEBUG
