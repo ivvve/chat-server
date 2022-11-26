@@ -15,6 +15,8 @@ abstract class Connection(
 
     abstract fun send(message: String)
 
+    abstract fun close(status: ConnectionCloseStatus)
+
     companion object {
         protected const val TIMEOUT_THRESHOLD_SECONDS = 10
     }

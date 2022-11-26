@@ -11,4 +11,8 @@ class WebSocketSessionConnection(
     override fun send(message: String) {
         this.session.sendMessage(TextMessage(message))
     }
+
+    override fun close(status: ConnectionCloseStatus) {
+        this.session.close(status)
+    }
 }
