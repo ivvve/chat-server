@@ -13,6 +13,10 @@ abstract class Connection(
         return TIMEOUT_THRESHOLD_SECONDS < latestPongDuration.seconds
     }
 
+    fun onPong(now: LocalDateTime) {
+        this.latestPongAt = now
+    }
+
     abstract fun send(message: String)
 
     abstract fun close(status: ConnectionCloseStatus)

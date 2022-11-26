@@ -58,7 +58,13 @@ class WebSocketSessionHandler(
      * @see [org.springframework.web.socket.WebSocketHandler.handleMessage]
      */
     override fun handleTextMessage(session: WebSocketSession, message: TextMessage) {
-        super.handleTextMessage(session, message)
+        val now = this.systemClock.now()
+        val payload = message.payload
+
+        if (payload == "PONG") {
+            val connection = session.getConnection()
+            connection.onPong(now)
+        }
     }
 
     /**
