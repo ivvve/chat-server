@@ -4,7 +4,7 @@
 [cols="1,5"]
 |===
 |Language
-|Kotlin 1.7.x
+|Kotlin 1.7.x (JDK 19)
 
 |Framework
 |Spring Framework (Boot 3.0.x)
