@@ -24,6 +24,9 @@ module(name = ":application:websocket", path = "src/application/websocket")
 // domain
 module(name = ":domain:chat", path = "src/domain/chat")
 
+// system-support
+module(name = ":system-support:spring", path = "src/system-support/spring")
+
 modules.forEach {
     include(it.name)
     project(it.name).projectDir = file(it.path)
