@@ -1,5 +1,5 @@
 dependencies {
-    implementation(project(":domain:chat"))
+    implementation(project(":domain:space"))
 
     // Web
     implementation("org.springframework.boot:spring-boot-starter-websocket")

@@ -6,7 +6,7 @@ spring:
     activate:
       on-profile: local
     import:
-      - 'classpath:domain-chat-api-${spring.config.activate.on-profile}.yml'
+      - 'classpath:domain-space-websocket-${spring.config.activate.on-profile}.yml'
 
 logging:
   level:
